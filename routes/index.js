@@ -24,9 +24,13 @@ function isAuthenticated(req, res, next) {
   if (req.user && req.isAuthenticated()) {
     return next();
   }
-  return res.render('pages/403', {layout: 'specific-layout'})
-  ;
+  return res.render('pages/401', {layout: 'specific-layout'})
 }
+
+router.get('/login2', (req, res) => {
+  res.render('pages/login2',{ layout: 'specific-layout' });
+});
+
 
 /* GET home page. */
 router.get('/', (req, res) => {
