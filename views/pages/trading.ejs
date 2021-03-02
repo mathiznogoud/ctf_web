@@ -1,0 +1,414 @@
+<body class="header-fix fix-sidebar">
+    <!-- Main wrapper  -->
+    <div id="load"></div>
+    <div id="main-wrapper">
+        <% include ../partials/navbar2 %>
+            <!-- End header header -->
+            <% include ../partials/sidebar %>
+                <!-- Page wrapper  -->
+                <div class="page-wrapper">
+                    <!-- Bread crumb -->
+                    <div class="row page-titles">
+                        <div class="col-md-5 align-self-center">
+                            <h3 class="text-primary">Trading</h3>
+                        </div>
+                        <div class="col-md-7 align-self-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item active">Trading</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- End Bread crumb -->
+                    <!-- Container fluid  -->
+                    <div class="container-fluid">
+                        <!-- Start Page Content -->
+                        <div class="row">
+                            <div class="tradingview-widget-container">
+                                <div id="tradingview_482e7"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                <script type="text/javascript">
+                                    new TradingView.widget(
+                                        {
+                                            "width": "85vw",
+                                            "height": "500",
+                                            "symbol": "BTCUSDT",
+                                            "interval": "D",
+                                            "timezone": "Etc/UTC",
+                                            "theme": "dark",
+                                            "style": "1",
+                                            "locale": "en",
+                                            "toolbar_bg": "#f1f3f6",
+                                            "enable_publishing": false,
+                                            "hide_legend": true,
+                                            "withdateranges": true,
+                                            "allow_symbol_change": true,
+                                            "save_image": false,
+                                            "details": true,
+                                            "container_id": "tradingview_482e7"
+                                        }
+                                    );
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div id="accordion" class="accordion">
+                                    <div class="card">
+                                        <a class="card-header bg-primary-darken-5 card-title" data-toggle="collapse"
+                                            aria-expanded="true" href="#collapseOne">
+                                            Limit
+                                        </a>
+                                        <div id="collapseOne" class="card-body collapse show" data-parent="#accordion">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-6">
+                                                    <div class="row my-2 p-l-15 p-r-15">
+                                                        <div class="col-4">
+                                                            <h5 class="text-bold-600 mb-0">Buy BTC</h5>
+                                                        </div>
+                                                        <div class="col-8 text-right">
+                                                            <p class="text-muted mb-0">USD Balance: $ 5000.00</p>
+                                                        </div>
+                                                    </div>
+                                                    <form class="form form-horizontal">
+                                                        <div class="form-body">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label"
+                                                                    for="btc-limit-buy-price">Price</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" id="btc-limit-buy-price"
+                                                                        class="form-control" placeholder="$ 0.0000"
+                                                                        name="btc-limit-buy-price">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label"
+                                                                    for="btc-limit-buy-amount">Amount</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" id="btc-limit-buy-amount"
+                                                                        class="form-control" placeholder="0.0000 BTC"
+                                                                        name="btc-limit-buy-amount">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label"
+                                                                    for="btc-limit-buy-total">Total</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" disabled
+                                                                        id="btc-limit-buy-total" class="form-control"
+                                                                        placeholder="$ 0.0000"
+                                                                        name="btc-limit-buy-total">
+                                                                </div>
+                                                            </div>
+                                                            <div class="pb-0 m-l-15 m-r-15">
+                                                            <button type="button" class="btn round btn-success btn-block btn-glow">
+                                                                Buy BTC
+                                                            </button>
+                                                        </div>
+                                                            </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-12 col-xl-6">
+                                                    <div class="row my-2 p-r-15 p-l-15">
+                                                        <div class="col-4">
+                                                            <h5 class="text-bold-600 mb-0">Sell BTC</h5>
+                                                        </div>
+                                                        <div class="col-8 text-right">
+                                                            <p class="text-muted mb-0">BTC Balance: 0.0000</p>
+                                                        </div>
+                                                    </div>
+                                                    <form class="form form-horizontal">
+                                                        <div class="form-body">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label">Price</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" id="btc-limit-sell-price"
+                                                                        class="form-control" placeholder="$ 0.0000"
+                                                                        name="btc-limit-sell-price">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label"
+                                                                    for="btc-limit-sell-amount">Amount</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" id="btc-limit-sell-amount"
+                                                                        class="form-control" placeholder="0.0000 BTC"
+                                                                        name="btc-limit-sell-amount">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label"
+                                                                    for="btc-limit-sell-total">Total</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" disabled
+                                                                        id="btc-limit-sell-total" class="form-control"
+                                                                        placeholder="$ 0.0000"
+                                                                        name="btc-limit-sell-total">
+                                                                </div>
+                                                            </div>
+                                                            <div class="pb-0 m-l-15 m-r-15">
+                                                                <button type="button"
+                                                                    class="btn round btn-danger btn-block btn-glow">
+                                                                    Sell BTC </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="card-header collapsed bg-primary-darken-5 card-title"
+                                            data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                            Market
+                                        </a>
+                                        <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-6">
+                                                    <div class="row my-2 p-l-15 p-r-15">
+                                                        <div class="col-4">
+                                                            <h5 class="text-bold-600 mb-0">Buy BTC</h5>
+                                                        </div>
+                                                        <div class="col-8 text-right">
+                                                            <p class="text-muted mb-0">USD Balance: $ 5000.00</p>
+                                                        </div>
+                                                    </div>
+                                                    <form class="form form-horizontal">
+                                                        <div class="form-body">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label"
+                                                                    for="btc-market-buy-price">Price</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" disabled
+                                                                        id="btc-market-buy-price" class="form-control"
+                                                                        placeholder="Market prise $"
+                                                                        name="btc-market-buy-price">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label"
+                                                                    for="btc-market-buy-amount">Amount</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" id="btc-market-buy-amount"
+                                                                        class="form-control" placeholder="0.0000 BTC"
+                                                                        name="btc-market-buy-amount">
+                                                                </div>
+                                                            </div>
+                                                            <div class="pb-0 m-l-15 m-r-15">
+                                                                <button type="button"
+                                                                    class="btn round btn-success btn-block btn-glow">
+                                                                    Buy BTC </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-12 col-xl-6">
+                                                    <div class="row my-2 p-r-15 p-l-15">
+                                                        <div class="col-4">
+                                                            <h5 class="text-bold-600 mb-0">Sell BTC</h5>
+                                                        </div>
+                                                        <div class="col-8 text-right">
+                                                            <p class="text-muted mb-0">BTC Balance: 0.0</p>
+                                                        </div>
+                                                    </div>
+                                                    <form class="form form-horizontal">
+                                                        <div class="form-body">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label">Price</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" disabled
+                                                                        id="btc-market-sell-price" class="form-control"
+                                                                        placeholder="Market prise $"
+                                                                        name="btc-market-sell-price">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-md-4 col-form-label"
+                                                                    for="btc-market-sell-amount">Amount</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="number" id="btc-market-sell-amount"
+                                                                        class="form-control" placeholder="0.0000 BTC"
+                                                                        name="btc-market-sell-amount">
+                                                                </div>
+                                                            </div>
+                                                            <div class="pb-0 m-l-15 m-r-15">
+                                                                <button type="button"
+                                                                    class="btn round btn-danger btn-block btn-glow">
+                                                                    Sell BTC </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="card-header collapsed bg-primary-darken-5 card-title"
+                                            data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                            Stop Limit
+                                        </a>
+                                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-12 col-xl-6">
+                                                        <div class="row my-2 p-l-15 p-r-15">
+                                                            <div class="col-4">
+                                                                <h5 class="text-bold-600 mb-0">Buy BTC</h5>
+                                                            </div>
+                                                            <div class="col-8 text-right">
+                                                                <p class="text-muted mb-0">USD Balance: $ 5000.00</p>
+                                                            </div>
+                                                        </div>
+                                                        <form class="form form-horizontal">
+                                                            <div class="form-body">
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-4 col-form-label"
+                                                                        for="btc-stop-buy">Stop</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="number" id="btc-stop-buy"
+                                                                            class="form-control" placeholder="$ 0.0000"
+                                                                            name="btc-stop-buy">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-4 col-form-label"
+                                                                        for="btc-stop-buy-limit">Limit</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="number" id="btc-stop-buy-limit"
+                                                                            class="form-control" placeholder="$ 0.0000"
+                                                                            name="btc-stop-buy-limit">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-4 col-form-label"
+                                                                        for="btc-stop-buy-amount">Amount</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="number" id="btc-stop-buy-amount"
+                                                                            class="form-control"
+                                                                            placeholder="0.0000 BTC"
+                                                                            name="btc-stop-buy-amount">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-4 col-form-label"
+                                                                        for="btc-stop-buy-total">Total</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="number" disabled
+                                                                            id="btc-stop-buy-total" class="form-control"
+                                                                            placeholder="$ 0.0000"
+                                                                            name="btc-stop-buy-total">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="pb-0 m-l-15 m-r-15">
+                                                                    <button type="button"
+                                                                        class="btn round btn-success btn-block btn-glow">
+                                                                        Buy BTC </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-12 col-xl-6">
+                                                        <div class="row my-2 p-r-15 p-l-15">
+                                                            <div class="col-4">
+                                                                <h5 class="text-bold-600 mb-0">Sell BTC</h5>
+                                                            </div>
+                                                            <div class="col-8 text-right">
+                                                                <p class="text-muted mb-0">BTC Balance: 0.0000</p>
+                                                            </div>
+                                                        </div>
+                                                        <form class="form form-horizontal">
+                                                            <div class="form-body">
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-4 col-form-label"
+                                                                        for="btc-stop-sell">Stop</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="number" id="btc-stop-sell"
+                                                                            class="form-control" placeholder="$ 0.0000"
+                                                                            name="btc-stop-sell">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-4 col-form-label"
+                                                                        for="btc-stop-sell-limit">Limit</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="number" id="btc-stop-sell-limit"
+                                                                            class="form-control" placeholder="$ 0.0000"
+                                                                            name="btc-stop-sell-limit">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-4 col-form-label"
+                                                                        for="btc-stop-sell-amount">Amount</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="number" id="btc-stop-sell-amount"
+                                                                            class="form-control"
+                                                                            placeholder="0.0000 BTC"
+                                                                            name="btc-stop-sell-amount">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-4 col-form-label"
+                                                                        for="btc-stop-sell-total">Total</label>
+                                                                    <div class="col-md-8">
+                                                                        <input type="number" disabled
+                                                                            id="btc-stop-sell-total"
+                                                                            class="form-control"
+                                                                            placeholder="$ 0.0000"
+                                                                            name="btc-stop-sell-total">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="pb-0 m-l-15 m-r-15">
+                                                                    <button type="button"
+                                                                        class="btn round btn-danger btn-block btn-glow">
+                                                                        Sell BTC </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card">
+                                    <div class="card-title">
+                                        <h4>Active Order</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="trade-history-table">
+                                            <div class="table-responsive">
+                                                <table class="table table-xs">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Date</th>
+                                                            <th>Type</th>
+                                                            <th>Amount BTC</th>
+                                                            <th>BTC Remaining</th>
+                                                            <th>Price</th>
+                                                            <th>USD</th>
+                                                            <th>Fee (%)</th>
+                                                            <th>Cancel</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- End PAge Content -->
+                    </div>
+                    <!-- End Container fluid  -->
+                    <!-- footer -->
+                    <footer class="footer text-center"> © 2021 VietKoin All Right Reserved.</footer>
+                    <!-- End footer -->
+                </div>
+                <!-- End Page wrapper  -->
+    </div>
+    <!-- End Wrapper -->
+    <!-- All Jquery -->
+    <% include ../partials/scripts %>
+</body>
